@@ -1,4 +1,6 @@
 #!/bin/bash
+cd "$(dirname "$0")"
+echo "Enter a password you would like to encrypt with:"
 read gPWD
 rm password.txt
 for i in $(getent passwd | grep /home/ | cut -d  ':' -f 1); do
